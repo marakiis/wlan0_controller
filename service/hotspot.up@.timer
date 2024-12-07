@@ -1,0 +1,9 @@
+[Unit]
+Description=Start the provided NetworkManager connection at 0700 every morning.
+
+[Timer]
+OnCalendar=Mon..Sun 07:00:00
+
+[Install]
+WantedBy=timers.target
+

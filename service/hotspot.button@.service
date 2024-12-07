@@ -1,0 +1,11 @@
+[Unit]
+Description=Controls the provided NetworkManager connection with the button.
+After=network.target
+
+[Service]
+Type=simple
+
+User=root
+ExecStart=/usr/local/bin/hotspot-button %I
+
+Restart=no

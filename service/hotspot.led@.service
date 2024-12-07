@@ -1,0 +1,11 @@
+[Unit]
+Description=Sync led status with the state of the provided NetworkManager connection.
+After=network.target
+
+[Service]
+Type=oneshot
+
+User=root
+ExecStart=/usr/local/bin/hotspot-led %I
+
+Restart=no

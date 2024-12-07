@@ -1,0 +1,10 @@
+[Unit]
+Description=Sync led status with the state of the provided NetworkManager connection every 5 seconds.
+
+[Timer]
+OnUnitActiveSec=5s
+OnBootSec=5s
+
+[Install]
+WantedBy=timers.target
+

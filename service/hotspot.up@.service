@@ -1,0 +1,11 @@
+[Unit]
+Description=Start the provided NetworkManager connection.
+After=network.target
+
+[Service]
+Type=oneshot
+
+User=root
+ExecStart=/usr/bin/nmcli connection up %I
+
+Restart=no

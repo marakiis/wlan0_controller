@@ -1,0 +1,11 @@
+[Unit]
+Description=Stop the provided NetworkManager device.
+After=network.target
+
+[Service]
+Type=oneshot
+
+User=root
+ExecStart=/usr/bin/nmcli device down $I
+
+Restart=no
